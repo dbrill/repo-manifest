@@ -17,7 +17,7 @@ NOTE: The full url to the repository should be:    <fetched URL of remote tag> +
 
 <manifest>
 
-  <remote name="calc"       alias="origin"  fetch="git://github.com/dbrill" />
+  <remote name="calc"       alias="origin"  fetch="https://github.com/dbrill" />
 
 
   <project name="repo-test-add"               	path="add/repo-test-add"               	remote="calc" groups="basic" revision="master" />
