@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Groups allow repo to restrict which projects to download and are specified with
+the '-g' option of 'init' (see 'repo help init'). Projects in the "notdefault"
+group are not automatically downloaded by repo.
+
+Group Descriptions:
+
+* basic: Basic calculations
+* harder: Harder calculations
+
+
+NOTE: The full url to the repository should be:    <fetched URL of remote tag> + <Name of repo in project line>
+
+-->
+
+<manifest>
+
+  <remote name="calc"       alias="origin"  fetch="git://github.com/dbrill" />
+
+
+  <project name="repo-test-add"               	path="add/repo-test-add"               	remote="calc" groups="basic" revision="master" />
+  <project name="repo-test-multiply"        	path="mult/repo-test-multiply"        	remote="calc" groups="harder" revision="master" />
+  <project name="repo-test-subtract"            path="minus/repo-test-subtract"         remote="calc" groups="basic" revision="master" />
+
+  <default revision="repo-manifest"		remote="calc"				sync-j="1"/>
+
+</manifest>
